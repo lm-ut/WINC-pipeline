@@ -58,7 +58,45 @@ Example
 | IND1 | StartingWindow | EndingWindow | DonorPop1 | DonorPop2 | DonorPopN |
 |:----:|:--------------:|:------------:|:---------:|:---------:|:---------:|
 | IND1 | 0 | 500000 | 0 | 0.40 | 0.85 | 2.7 |
-| IND1 | 500000 | 1000000 | 0.15 | 0 | 1.35 |
+| IND1 | 500000 | 1000000 | 0.15 | 0 | 1.35 |  
+
+###Performing NNLS analyses with the addition of the Correlation-AssignmentScore matrix
+
+NNLS_step.R is a R-based script that allows to perform NNLS on a window-based copying vector. The script applies the C-AS matrix as well (CASmatrix.txt), a reference grid to inform a priori on the accuracy to be expected by WINC for a given set of Ancestry Assignments and local diversification between sources.  
+
+The script accepts a .csv file as argument, with the following parameters:  
+
+* **S1**	             name of source 1 population
+* **S2**	             name of source 2 population
+* **S3**               OPTIONAL parameter with the name of source 3 population
+* **admixedName**	     name of the admixed population
+* **pathPainting**	   path to the admixed population copying vectors splitted by the ParseWindow 
+* **donorDir**	       path to the source populations copying vectors splitted by the ParseWindow 
+* **listSamplesFile**	 path to a 2 columns file,  with individuals' ID in the first colum and individuals' population infomation in the second one
+* **suffixWindowsPainted** suffix used in the ParseWindows.py	--out argument
+
+Example  
+
+| S1 | S2 | admixedName | pathPainting | donorDir | listSamplesFile |
+|:--:|:--:|:-----------:|:------------:|:--------:|:---------------:|
+| CEU  |  ESN  |   ASW  |  ~/path1/  | ~/path2/ | ~/path2/SampleList.txt |
+
+
+####Output 
+
+The NNLS_step script outputs a window-based Local Ancestry call per each individual (INDn.winc.tmp). The output files contain one row per window with the source assignments. The first two columns contain windows coordinates (Start and End). The following columns (S1 and S2 in the example, and S3 in case of a three-ways admixture) yield the proportion of the sources.  
+Following the source columns information, we added the ancestry assignment calls obtained by applying either the C-AS matrix (columns named accuracy.N) or a simple threshold (colums named thresN). The C-AS matrix accuracy values used are: 0.8, 0.9, 0.95 and 0.99. The threshold values used are: 0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.91,0.92,0.93,0.94,0.95,0.96,0.97,0.98,0.99.  
+The rho column contains the rho values obtained between sources' windows. The last column "Usable" checks if there is enough information in the window copying vector analysed.
+
+The current output will be edited soon to be easier to handle.  
+
+Example of output file  
+
+
+| Start | End | S1 | S2 | NoThreshold | accuracy.8 | accuracy.N | thres0.55 | thresN | rho | Usable | 
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   0   | 500000|1|0|0|0|0|0|0|-0.11|Y|
+|500000|1000000|0.74|0.26|0|0|0|NA|NA|-0.12|Y|  
 
  
  
