@@ -49,7 +49,7 @@ Example of command line
     
 #### Output
 
-ParseWindows returns window-based copying vector per each file.sample.out analysed, where individuals are separated in two haplotypes (A and B).
+ParseWindows returns window-based copying vector per each individual analised in the file.sample.out. In each output file individuals are separated in two haplotypes (A and B).
 The output files contain one row per window with the chunks donated to the individual in rows from populations in columns.  
 
 
