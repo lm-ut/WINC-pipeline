@@ -59,3 +59,10 @@ Example
 |:----:|:--------------:|:------------:|:---------:|:---------:|:---------:|
 | IND1 | 0 | 500000 | 0 | 0.40 | 0.85 | 2.7 |
 | IND1 | 500000 | 1000000 | 0.15 | 0 | 1.35 |
+
+ 
+ 
+####### How to cite this work & get in touch
+
+Molinaro et al. 2020 submitted for publication
+ludovica.molinaro@ut.ee
