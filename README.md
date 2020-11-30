@@ -64,5 +64,6 @@ Example
  
 #### How to cite this work & get in touch
 
-Molinaro et al. 2020 submitted for publication
+Molinaro et al. 2020 submitted for publication  
+
 ludovica.molinaro@ut.ee
