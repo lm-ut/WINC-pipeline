@@ -1,6 +1,6 @@
 ### WINC-pipeline
 
-###Introduction
+### Introduction
 
 WINC is a methodology that applies Local Ancestry concepts on ChromoPainter. WINC splits ChromoPainter copying vectors in windows with the same length and perform NNLS analyses on each windows. The Local Ancestry information will therefore be window-wise and not SNP-wise.  
 
@@ -11,7 +11,7 @@ All listed steps and scripts assume that the test dataset has been analyzed thro
 All information about ChromoPainter can be found here: https://people.maths.bris.ac.uk/~madjl/finestructure-old/chromopainter_info.html  
 
 
-###Splitting copying-vectors with ParseWindows script
+### Splitting copying-vectors with ParseWindows script
 
 The ParseWindows script allows to split ChromoPainter copying vectors into window-base copying vectors.  
 
@@ -47,7 +47,7 @@ Example of command line
   
     
     
-####Output
+#### Output
 
 ParseWindows returns window-based copying vector per each file.sample.out analysed, where individuals are separated in two haplotypes (A and B).
 The output files contain one row per window with the chunks donated to the individual in rows from populations in columns.  
