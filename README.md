@@ -23,7 +23,7 @@ ParseWindows is a python-based script and accepts the following parameters as ar
 *  --**label**           labelfile used for ChromoPainter, a three column file with ID information, population information and 0/1. 
 *  --**samples**         ChromoPainter samples.out file 
 *  --**genmap**          genetic map in bim format, a four columns file with Chr, SNP-ID, Position in cM, Base-pair coordinate
-*  --**out**             output suffix  
+*  --**out**             output name  
 
 Window length is currently embedded into the script and set as 500000 (500 kilo bases). To modify it please edit line 28 of the script and set the desired window length. This feature will be edited soon.  
   
@@ -43,7 +43,7 @@ Example of label file
                       
 Example of command line  
 
-`python ParseWindows.py --label ChromoPainter_DonorFile --samples ChromoPainter_IND1.samples.out --genmap BimFormat.GeneticMap --out GenWindows.out`  
+`python ParseWindows.py --label ChromoPainter_DonorFile --samples ChromoPainter_IND1.samples.out --genmap BimFormat.GeneticMap --out IND1GenWindows.out`  
   
     
     
