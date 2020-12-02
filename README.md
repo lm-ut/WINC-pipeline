@@ -64,6 +64,9 @@ Example
 
 NNLS_step.R is a R-based script that allows to perform NNLS on a window-based copying vector. The script applies the C-AS matrix as well (CASmatrix.txt), a reference grid to inform a priori on the accuracy to be expected by WINC for a given set of Ancestry Assignments and local diversification between sources.  
 
+Please load the nnls library with **library(nnls)** before running the script.  
+
+
 The script accepts a .csv file as argument, with the following parameters:  
 
 * **S1**	             name of source 1 population
