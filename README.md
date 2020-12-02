@@ -75,7 +75,7 @@ The script accepts a .csv file as argument, with the following parameters:
 * **admixedName**	     name of the admixed population
 * **pathPainting**	   path to the admixed population copying vectors splitted by the ParseWindow 
 * **donorDir**	       path to the source populations copying vectors splitted by the ParseWindow 
-* **listSamplesFile**	 path to a 2 columns file,  with individuals' ID in the first colum and individuals' population infomation in the second one
+* **listSamplesFile**	 path to a 2 columns file,  with individuals' population information in the first column and ID infomation in the second one
 * **suffixWindowsPainted** suffix used in the ParseWindows.py	--out argument
 
 Example  
