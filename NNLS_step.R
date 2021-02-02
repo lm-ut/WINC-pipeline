@@ -175,8 +175,10 @@ for (par in 1:nrow(paramTable)){
   allinds <- (do.call(rbind,allinds))
   
   allinds=split(allinds,rep(1:N,length(hapsA)))
+  x=1
   for (ind in subsetADM){
-    write.table(file = paste0(ind,".winc.tmp"),x = cbind(winnames,allinds[[1]]),quote=F,row.names = F)
+    write.table(file = paste0(ind,".winc.tmp"),x = cbind(winnames,allinds[[x]]),quote=F,row.names = F)
+    x=x+1
   }
 
 }
