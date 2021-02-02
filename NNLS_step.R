@@ -92,7 +92,7 @@ for (par in 1:nrow(paramTable)){
     colnames(winnames)=c("Start","End")
     S3 <- lapply(S3,function (X) X[,-c(1:3)])
     S3=as.matrix(Reduce("+", S3) )
-    S3=S3[1:(nrow(S1)/2),]+S3[((nrow(S3)/2)+1):nrow(S3),]
+    S3=S3[1:(nrow(S3)/2),]+S3[((nrow(S3)/2)+1):nrow(S3),]
     S3=t(apply(S3,1,function(X) X/(sum(X)+1e-36)))
     S3=rbind(S3,S3)
     print(sprintf("Analysing %s-%s-%s...",S1n,S2n,S3n))
