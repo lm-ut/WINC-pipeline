@@ -67,7 +67,7 @@ NNLS_step.R is a R-based script that allows to perform NNLS on a window-based co
 Please load the nnls library with **library(nnls)** before running the script.  
 
 
-The script accepts a .csv file as argument, with the following parameters:  
+The script accepts a table-like file as argument (read.table() function will read the file), with the following parameters:  
 
 * **S1**	             name of source 1 population
 * **S2**	             name of source 2 population
@@ -105,6 +105,6 @@ Example of output file
  
 #### How to cite this work & get in touch
 
-Molinaro et al. 2020 submitted for publication  
+Article: Molinaro et al 2021 https://doi.org/10.1093/gbe/evab025
 
 ludovica.molinaro@ut.ee
