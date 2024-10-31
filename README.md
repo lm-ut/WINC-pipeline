@@ -107,4 +107,4 @@ Example of output file
 
 Article: Molinaro et al 2021 https://doi.org/10.1093/gbe/evab025
 
-ludovica.molinaro@ut.ee
+ludovica.molinaro@kuleuven.be
