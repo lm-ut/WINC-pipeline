@@ -106,5 +106,3 @@ Example of output file
 #### How to cite this work & get in touch
 
 Article: Molinaro et al 2021 https://doi.org/10.1093/gbe/evab025
-
-ludovica.molinaro@kuleuven.be
